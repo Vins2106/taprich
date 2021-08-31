@@ -1,3 +1,39 @@
 /* .first-play {
   
 } */
+
+.first-play {
+  max-width: 400px;
+  margin: 50px auto 50px auto;
+  background: #3d3d3d;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.first-play-group img {
+  width: -webkit-fill-available;
+}
+
+.first-play-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.first-play-group button {
+  width: -webkit-fill-available;
+}
+
+.first-play-group {
+  color: white;
+  margin: 20px 0;
+}
+
+@media (max-width: 490px) {
+  
+  .first-play {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+  }
+  
+}
