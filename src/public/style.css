@@ -29,6 +29,7 @@ body {
   animation-name: shake;
   animation-duration: 2s;
   animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 
 .btn:focus {
@@ -44,42 +45,25 @@ strong:hover {
   animation-name: strongtext;
   animation-duration: 2s;
   animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 
 /* keyframe */
 @keyframes shake {
   0% {
-    transform: rotate(1deg)
+    transform: rotate(0deg)
   }
   20% {
-    transform: rotate(2deg)
-  }
-  40% {
-    transform: rotate(1deg)
-  }
-  80% {
-    transform: rotate(0deg)
-  }
-  90% {
-    transform: rotate(-1deg)
-  }
-  50% {
     transform: rotate(-2deg)
   }
-  60% {
-    transform: rotate(-1deg)
-  }
-  70% {
-    transform: rotate(0deg)
-  }
-  80% {
-    transform: rotate(1deg)
-  }  
-  90% {
+  40% {
     transform: rotate(2deg)
   }
+  80% {
+    transform: rotate(-2deg)
+  }
   100% {
-    transform: rotate(1deg)
+    transform: rotate(2deg)
   }
 }
 
