@@ -14,7 +14,7 @@
   left: 0;
   right: 0;
   height: fit-content;
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
 
 .first-play-group img {
@@ -33,6 +33,15 @@
 .first-play-group {
   color: white;
   margin: 20px 0;
+}
+
+.first-play.no-display {
+  transform: scale(0);
+}
+
+.main {
+  width: -webkit-fill-available;
+  height: 90vh;
 }
 
 @media (max-width: 490px) {

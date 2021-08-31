@@ -36,10 +36,6 @@ body {
   background-color: #00b3ff;
 }
 
-.no-display {
-  display: none !important;
-}
-
 /* keyframe */
 @keyframes shake {
   0% {
