@@ -21,12 +21,13 @@ body {
   font-weight: bold;
   border-radius: 6px;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .btn:hover {
   background-color: #00b3ff;
   animation-name: shake;
-  animation-duration: 1s;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
 }
 
@@ -34,30 +35,62 @@ body {
   background-color: #00b3ff;
 }
 
+strong {
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+strong:hover {
+  animation-name: strongtext;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
 /* keyframe */
 @keyframes shake {
   0% {
-    transform: rotate(1deg);
+    transform: rotate(1deg)
   }
-  10% {
-    transform: rotate(2deg);
+  20% {
+    transform: rotate(2deg)
   }
-  25% {
-    transform: rotate(-2deg);
+  40% {
+    transform: rotate(1deg)
   }
-  50% {
-    transform: rotate(2deg);
-  }
-  75% {
-    transform: rotate(-2deg);
+  80% {
+    transform: rotate(0deg)
   }
   90% {
-    transform: rotate(2deg);
+    transform: rotate(-1deg)
   }
-  95% {
-    transform: rotate(1deg);
+  50% {
+    transform: rotate(-2deg)
+  }
+  60% {
+    transform: rotate(-1deg)
+  }
+  70% {
+    transform: rotate(0deg)
+  }
+  80% {
+    transform: rotate(1deg)
+  }  
+  90% {
+    transform: rotate(2deg)
   }
   100% {
-    transform: rotate(0deg);
+    transform: rotate(1deg)
+  }
+}
+
+@keyframes strongtext {
+  0% {
+    font-size: 16px;
+  }
+  50% {
+    font-size: 20px;
+  }
+  100% {
+    font-size: 16px;
   }
 }
