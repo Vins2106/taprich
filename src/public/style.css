@@ -17,15 +17,47 @@ body {
   border: 0;
   padding: 10px 40px;
   font-size: 16px;
-  background-color: #00d607;
+  background-color: #008dc9;
   font-weight: bold;
   border-radius: 6px;
+  transition: 0.3s;
 }
 
 .btn:hover {
-  background-color: #0ce813;
+  background-color: #00b3ff;
+  animation-name: shake;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
 
 .btn:focus {
-  background-color: #0ce813;
+  background-color: #00b3ff;
+}
+
+/* keyframe */
+@keyframes shake {
+  0% {
+    transform: rotate(1deg);
+  }
+  10% {
+    transform: rotate(2deg);
+  }
+  25% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+  90% {
+    transform: rotate(2deg);
+  }
+  95% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
