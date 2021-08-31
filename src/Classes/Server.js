@@ -1,21 +1,21 @@
-    const express = require("express");
-    const app = express();
-    const assets = require("../assets.js");
+const express = require("express");
+const app = express();
+const assets = require("../assets.js");
 
-    app.set("public", "/app/src/public");
-    app.set("views", "/app/src/views");
+app.use(express.static("/app/src/public"));
+app.set("views", "/app/src/views");
 
-    app.get("/", async (req, res) => {
-      res.render("index.ejs", {
-        req,
-        res,
-        assets
-      });
-    });
+app.get("/", async (req, res) => {
+  res.render("index.ejs", {
+    req,
+    res,
+    assets
+  });
+});
 
-    app.use("/", async (req, res) => {
-      res.redirect("/");
-    });
+app.use("/", async (req, res) => {
+  res.redirect("/");
+});
 
 class Server {
   constructor(port) {
@@ -24,9 +24,10 @@ class Server {
   }
 
   exec() {
-
-    app.listen(process.env.PORT || 3000, () => {
+    app.listen(this.port || 3000, () => {
       console.log(`Website running`);
     });
   }
 }
+
+module.exports = Server

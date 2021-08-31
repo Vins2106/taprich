@@ -1,9 +1,9 @@
 const EventEmitter = require("events");
 const Server = require("./Server.js");
 
-class TapRich extends EventEmitter {
+class TapRich extends Server {
   constructor(opt = {}) {
-    super();
+    super(3000);
     
     this.opt = opt;
   }
