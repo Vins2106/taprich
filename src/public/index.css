@@ -1,6 +1,9 @@
 /* .first-play {
   
 } */
+body {
+  overflow: hidden;
+}
 
 .first-play {
   max-width: 400px;
@@ -42,6 +45,32 @@
 .main {
   width: -webkit-fill-available;
   height: 90vh;
+}
+
+.navbar {
+  overflow: hidden;
+  height: 101vh;
+  background: #3d3d3d;
+  transform: translateY(0vh);
+  transition: 1s;
+  width: 101%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul.navs {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #ddd;
+  padding: 0 0 10px 0;
+  cursor: pointer;
+}
+
+.navbar.navbar-on {
+  transform: translateY(-91vh);
 }
 
 @media (max-width: 490px) {

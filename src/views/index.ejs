@@ -31,10 +31,10 @@
     </div>
     
 <!--     navigation -->
-    <div class="navbar navbar-hide">
-      <ul class="navs">
+    <div class="navbar" id="navbar">
+      <ul class="navs" onclick="openNav()">
         <li class="nav-item">
-          <a class="nav-link" onclick="openNav()"><img src="<%= assets.up %>"></a>
+          <a class="nav-link"></a><img id="nav-toggle" src="<%= assets.up %>"></a>
         </li>
       </ul>
       
