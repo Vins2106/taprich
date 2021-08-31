@@ -9,7 +9,7 @@ class TapRich extends EventEmitter {
   }
   
   run() {
-    
+    this.server = new Server();
   }
 }
 
