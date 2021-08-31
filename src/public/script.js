@@ -5,13 +5,14 @@ let Nav = document.getElementById("navbar")
 let navToggle = document.getElementById("nav-toggle")
 let isNav = false;
 
-if (!isFirst) {
-  fPlay.style.display = "block";
+if (isFirst) {
+  fPlay.style.display = "none";
 }
 
 // btn click
 sBtn.onclick = function() {
   fPlay.classList.add("no-display")
+  localStorage.setItem("first", "true")
 }
 
 function openNav() {
